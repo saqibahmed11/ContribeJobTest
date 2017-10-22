@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContribeJobTest", "ContribeJobTest\ContribeJobTest.csproj", "{B9A2E2EC-8F04-4A58-AA6F-9540CCE6751A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContribeJobTest.Test", "ContribeJobTest.Test\ContribeJobTest.Test.csproj", "{BDED9056-69F5-49AF-B816-A92EDD99FE04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9A2E2EC-8F04-4A58-AA6F-9540CCE6751A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A2E2EC-8F04-4A58-AA6F-9540CCE6751A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A2E2EC-8F04-4A58-AA6F-9540CCE6751A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A2E2EC-8F04-4A58-AA6F-9540CCE6751A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDED9056-69F5-49AF-B816-A92EDD99FE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDED9056-69F5-49AF-B816-A92EDD99FE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDED9056-69F5-49AF-B816-A92EDD99FE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDED9056-69F5-49AF-B816-A92EDD99FE04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E3F37B8-AB46-4B75-AFFB-841C6D9E9BFF}
+	EndGlobalSection
+EndGlobal

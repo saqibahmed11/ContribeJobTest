@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="search">Search Book:</label>
+            <input type="text" class="form-control" id="search" data-bind="textInput: searchString">
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author name</th>
+                    <th>Price</th>
+                    <th>In Stock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: rawBooks">
+                <tr>
+                    <td data-bind="text: title"></td>
+                    <td data-bind="text: author"></td>
+                    <td data-bind="text: price"></td>
+                    <td data-bind="text: inStock"></td>
+                    <td><button data-bind="click: $root.addToCart">Add to cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div class="row" data-bind="visible: inCart().length > 0">
+    <div class="col-md-12">
+        <h1>
+            My Cart
+            <button data-bind="click: $root.placeOrder">Place Order</button>
+        </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: inCart">
+                <tr>
+                    <td data-bind="text: title"></td>
+                    <td data-bind="text: author"></td>
+                    <td data-bind="text: price"></td>
+                    <td data-bind="text: amount"></td>
+                    <td>
+                        <button data-bind="click: $root.removeFromCart">Remove from cart</button>
+                        <button data-bind="click: $root.addToCart">Add more</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row" data-bind="visible: inCart().length > 0">
+    <div class="col-md-12">
+        <h1>Total Price : <span data-bind="text :totalPrice "></span></h1>
+    </div>
+</div>
+
+
+
+
+<div class="row" data-bind="visible: responseFromServerArray().length > 0">
+    <div class="col-md-12">
+        <h1>
+            Response from server 
+            <button data-bind="click: resetData">
+                Place new orders
+            </button>
+        </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: responseFromServerArray">
+                <tr>
+                    <td data-bind="text: title"></td>
+                    <td data-bind="text: author"></td>
+                    <td data-bind="text: price"></td>
+                    <td data-bind="text: amount"></td>
+                    <td data-bind="text: message"></td>
+                    <td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row" data-bind="visible: responseFromServerArray().length > 0">
+    <div class="col-md-12">
+        <h1>Total Price to be paid: <span data-bind="text :totalPricePaid "></span></h1>
+    </div>
+</div>
